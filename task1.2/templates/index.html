@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Описание возможностей сервиса</title>
+</head>
+<body>
+    <h1>Описание возможностей сервиса</h1>
+    <ul>
+        <li>
+            Получить все данные хранилища WEB: <br>
+            http://{HOSTNAME:PORT}/api/v1/storage/json/all
+        </li>
+        <br>
+        <li>
+            Получить все данные хранилища CURL:<br>
+            curl -i -X GET http://{HOSTNAME:PORT}/api/v1/storage/json/all
+        </li>
+        <br>
+        <li>
+            Получить данные хранилища по ключу WEB:<br>
+            http://{HOSTNAME:PORT}/api/v1/storage/json?key=test
+        </li>
+        <br>
+        <li>
+            Получить данные хранилища по ключу CURL:<br>
+            curl -i -GET http://{HOSTNAME:PORT}/api/v1/storage/json?key=test
+        </li>
+        <br>
+        <li>
+            Добавить данные в хранилище хранилища WEB:<br>
+            http://{HOSTNAME:PORT}/api/v1/storage/json/write?key=test&val=test
+        </li>
+        <br>
+        <li>
+            Добавить данные в хранилище хранилища CURL:<br>
+            curl -i -H "Content-Type: application/json" -X POST -d '{"test3": "value4"}' http://{HOSTNAME:PORT}/api/v1/storage/json/write
+        </li>
+    </ul>
+</body>
+</html>
